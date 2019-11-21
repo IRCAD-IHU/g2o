@@ -12,8 +12,10 @@ if(CHOLMOD_FOUND)
 endif(CHOLMOD_FOUND)
 
 # Sparse Module of Eigen is stable starting from 3.1
-if (DEFINED EIGEN3_VERSION)
-  if(${EIGEN3_VERSION} VERSION_GREATER "3.1.0" OR ${EIGEN3_VERSION} VERSION_EQUAL "3.1.0")
+#if (DEFINED EIGEN3_VERSION)
+#  if(${EIGEN3_VERSION} VERSION_GREATER "3.1.0" OR ${EIGEN3_VERSION} VERSION_EQUAL "3.1.0")
+if(G2O_EIGEN3_EIGEN_TARGET)
     add_subdirectory(eigen)
-  endif()
 endif()
+#  endif()
+#endif()
